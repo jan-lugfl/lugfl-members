@@ -2,7 +2,7 @@ from django.db import models
 from django.utils.translation import ugettext as _
 
 class Member( models.Model ):
-  mitglied_nr = models.IntegerField( verbose_name=_('Member #') )
+  mitglied_nr = models.AutoField( primary_key=True, verbose_name=_('Member #') )
   aktiv = models.BooleanField( default=True, verbose_name=_('Active?') )  
   nachname = models.CharField( max_length=200, verbose_name=_('Lastname') )
   vorname = models.CharField( max_length=200, verbose_name=_('Firstname') )
