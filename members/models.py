@@ -24,7 +24,7 @@ class Member( models.Model ):
   blz = models.IntegerField( null=True, blank=True, verbose_name=_('Bank ID') )
   konto_nr = models.IntegerField( null=True, blank=True, verbose_name=_('Account') )
   konto_inh = models.CharField( max_length=100, null=True, blank=True, verbose_name=_('Account Owner') )
-  iban = models.CharField( max_length=21, null=True, blank=True, verbose_name=_('IBAN') )
+  iban = models.CharField( max_length=34, null=True, blank=True, verbose_name=_('IBAN') )
   bic = models.CharField( max_length=11, null=True, blank=True, verbose_name=_('BIC') )
   current_separef = models.CharField( max_length=16, null=True, blank=True, verbose_name=_('current SEPA reference') )
   sepa_autopay = models.BooleanField( verbose_name=_('SEPA Autopayments') )
